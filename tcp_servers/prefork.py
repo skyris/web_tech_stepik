@@ -20,6 +20,7 @@ for i in range(4):
                 print '(child {}) {} : {}'.format(os.getpid(), client_socket.getpeername(), request)
                 client_socket.close()
         except KeyboardInterrupt:
+            client_socket.close()
             sys.exit()
 
 try:
